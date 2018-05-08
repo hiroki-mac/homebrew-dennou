@@ -9,7 +9,7 @@ class Gtool5 < Formula
   depends_on 'netcdf' => 'with-fortran'
 
   def install
-    brew_prefix = `brew --prefix`.chomp!
+    brew_prefix = `/usr/local/bin/brew --prefix`.chomp!
     ENV.deparallelize
     if ENV['SYSFFLAGS'].nil?
       ENV.append 'SYSFFLAGS', "-I#{brew_prefix}/include"
