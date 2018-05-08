@@ -16,6 +16,7 @@ class Gtool5 < Formula
     else
       ENV['SYSFFLAGS'] = "-I#{brew_prefix}/include"
     end
+    ENV.append 'FC', "gfortran"
     system "./configure", "--with-netcdf-include=#{brew_prefix}/include/netcdf.inc",
                           "--with-netcdff=#{brew_prefix}/lib/libnetcdff.a",
                           "--with-netcdf=#{brew_prefix}/lib/libnetcdf.a",
