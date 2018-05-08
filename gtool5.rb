@@ -25,7 +25,7 @@ class Gtool5 < Formula
     system "make install"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     This gtool5 library build with following FLAGS:
       FFLAGS:  #{ENV['SYSFFLAGS']}
 
