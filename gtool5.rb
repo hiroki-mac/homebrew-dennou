@@ -5,7 +5,7 @@ class Gtool5 < Formula
   version "20160613"
   sha256 "10824135382ab4efb7b92cb3206243956a1aaa8bd5e94443c84fd46a453302f8"
 
-  depends_on :fortran
+  depends_on 'gcc'
   depends_on 'netcdf' => 'with-fortran'
 
   def install

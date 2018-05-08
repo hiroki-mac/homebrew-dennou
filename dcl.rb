@@ -1,12 +1,13 @@
 class Dcl < Formula
-  desc ""
+  desc "This is a Fortran version of DCL, a drawing library useful for planetary and Earth sciences. This library includes graphical, character processing, and mathematical libraries."
   homepage ""
-  url "https://www.gfd-dennou.org/library/dcl/dcl-7.1.1.tar.gz"
-  version "7.1.1"
-  sha256 "57d8924d0c1245af239dee6abc1bbf82926dd86f1dd7ac3911b216cfc6a30e13"
+  url "https://www.gfd-dennou.org/library/dcl/dcl-7.1.2.tar.gz"
+  version "7.1.2"
+  sha256 "01400cc516698e915a51fc5a004fe7ac6c25e470a565fd49f4affed44f3975ca"
 
-  depends_on :fortran
+  depends_on 'gcc'
   depends_on 'gtk+'
+  depends_on 'pkg-config'
 
   def install
     ENV.deparallelize
