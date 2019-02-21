@@ -11,7 +11,7 @@ class Dcl < Formula
 
   def install
     ENV.deparallelize
-    system "./configure", "--prefix=#{prefix} --with-gtk2"
+    system "./configure", "--prefix=#{prefix}", "--with-gtk2"
     system "make"
     system "make install"
   end
