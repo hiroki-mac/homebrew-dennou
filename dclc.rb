@@ -7,12 +7,15 @@ class Dclc < Formula
 
   depends_on 'gtk+'
   depends_on 'pkg-config'
+  depends_on 'dcl'
 
   def install
     ENV.deparallelize
     system "./configure", "--prefix=#{prefix}", "--with-gtk2"
     system "make"
     system "make install"
+    dclbasedir = `dclconfig --dbasedir`.chomp
+    system "ln -s #{dclbasedir}/bitmap.x11 #{prefix}/lib/cdcldbase/."
   end
 
   test do
