@@ -6,12 +6,12 @@ class Dcl < Formula
   sha256 "5f38d8206f3f473321dca3717bc060921c5360ed5d47403b50677c847c439f93"
 
   depends_on 'gcc'
-  depends_on 'gtk+3'
+  depends_on 'gtk+'
   depends_on 'pkg-config'
 
   def install
     ENV.deparallelize
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix} --with-gtk2"
     system "make"
     system "make install"
   end
